@@ -4,11 +4,11 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>OpenGarage</title>
+    <title>OpenGarage / <%=Page.Title%></title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
     <style type="text/css">
         body {
             padding-top: 60px;
@@ -16,7 +16,7 @@
         }
     </style>
 
-    <link href="../Content/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="Content/bootstrap-responsive.css" rel="stylesheet" />
 
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -35,12 +35,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="#">OpenGarage</a>
+                    <a class="brand" href="<%= ResolveClientUrl("~/Default.aspx") %>">OpenGarage</a>
                     <div class="nav-collapse">
                         <ul class="nav">
-                            <li class="active"><a href="#">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="<%= ResolveClientUrl("~/Default.aspx") %>">Home</a></li>
+                            <li><a href="<%= ResolveClientUrl("~/About.aspx") %>">About</a></li>
+                            <li><a href="<%= ResolveClientUrl("~/Contact.aspx") %>">Contact</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
@@ -55,9 +55,9 @@
                             </li>
                         </ul>
                         <div class="form navbar-form pull-right">
-                            <input class="span2" type="text" placeholder="Email">
-                            <input class="span2" type="password" placeholder="Password">
-                            <button type="submit" class="btn">Sign in</button>
+                            <asp:TextBox ID="txtEmailAddress" runat="server" CssClass="span2" placeholder="Email Address" />
+                            <asp:TextBox ID="txtPassword" runat="server" CssClass="span2" TextMode="Password" placeholder="Password" />
+                            <asp:Button ID="btnSignIn" runat="server" CssClass="btn" OnClick="btnSignIn_Click" Text="Sign in" />
                         </div>
                     </div>
                     <!--/.nav-collapse -->
@@ -75,18 +75,18 @@
         <!-- /container -->
     </form>
 
-    <script src="../Scripts/jquery.js"></script>
-    <script src="../Scripts/bootstrap-transition.js"></script>
-    <script src="../Scripts/bootstrap-alert.js"></script>
-    <script src="../Scripts/bootstrap-modal.js"></script>
-    <script src="../Scripts/bootstrap-dropdown.js"></script>
-    <script src="../Scripts/bootstrap-scrollspy.js"></script>
-    <script src="../Scripts/bootstrap-tab.js"></script>
-    <script src="../Scripts/bootstrap-tooltip.js"></script>
-    <script src="../Scripts/bootstrap-popover.js"></script>
-    <script src="../Scripts/bootstrap-button.js"></script>
-    <script src="../Scripts/bootstrap-collapse.js"></script>
-    <script src="../Scripts/bootstrap-carousel.js"></script>
-    <script src="../Scripts/bootstrap-typeahead.js"></script>
+    <script src="Scripts/jquery.js"></script>
+    <script src="Scripts/bootstrap-transition.js"></script>
+    <script src="Scripts/bootstrap-alert.js"></script>
+    <script src="Scripts/bootstrap-modal.js"></script>
+    <script src="Scripts/bootstrap-dropdown.js"></script>
+    <script src="Scripts/bootstrap-scrollspy.js"></script>
+    <script src="Scripts/bootstrap-tab.js"></script>
+    <script src="Scripts/bootstrap-tooltip.js"></script>
+    <script src="Scripts/bootstrap-popover.js"></script>
+    <script src="Scripts/bootstrap-button.js"></script>
+    <script src="Scripts/bootstrap-collapse.js"></script>
+    <script src="Scripts/bootstrap-carousel.js"></script>
+    <script src="Scripts/bootstrap-typeahead.js"></script>
 </body>
 </html>
