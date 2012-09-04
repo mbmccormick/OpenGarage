@@ -38,21 +38,10 @@
                     <a class="brand" href="<%= ResolveClientUrl("~/Default.aspx") %>">OpenGarage</a>
                     <div class="nav-collapse">
                         <ul class="nav">
-                            <li><a href="<%= ResolveClientUrl("~/Default.aspx") %>">Home</a></li>
-                            <li><a href="<%= ResolveClientUrl("~/About.aspx") %>">About</a></li>
-                            <li><a href="<%= ResolveClientUrl("~/Contact.aspx") %>">Contact</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li class="divider"></li>
-                                    <li class="nav-header">Nav header</li>
-                                    <li><a href="#">Separated link</a></li>
-                                    <li><a href="#">One more separated link</a></li>
-                                </ul>
-                            </li>
+                            <li><asp:HyperLink ID="lnkHome" NavigateUrl="~/Default.aspx" runat="server">Home</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="lnkExplore" NavigateUrl="~/Explore.aspx" runat="server">Explore</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="lnkRegister" NavigateUrl="~/Account/Register.aspx" runat="server">Register</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="lnkAbout" NavigateUrl="~/About.aspx" runat="server">About</asp:HyperLink></li>
                         </ul>
                         <div class="form navbar-form pull-right">
                             <asp:TextBox ID="txtEmailAddress" runat="server" CssClass="span2" placeholder="Email Address" />
